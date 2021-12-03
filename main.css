@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#imgSite{
+    width: 1920px;
+    height: 1280px;
+}
+
+h1{
+    color: white;
+    font-size: 4em;
+    margin-top: 25%;
+}
