@@ -15,10 +15,11 @@ window.addEventListener('load', function () {
 $('#imgSite').on('click', function(e) {
 
     // Fire the callback if the click was in the top 100px by 100px
-    // if ((e.pageY <= 1050 && e.pageY >= 1000 ) && index==4) {
-    if(index==16 && 
-        e.pageX-this.offsetLeft-1445>= 0 && e.pageX- this.offsetLeft-1445<=75 && 
-        e.pageY-this.offsetTop-1000>=0 && e.pageY-this.offsetTop-1000<=50 ){
+    // if ((e.pageY <= 1050 && e.pageY >= 1000 ) && index==4) {*
+    
+    if((index==16) && 
+        e.pageX-this.offsetLeft-980>= 0 && e.pageX- this.offsetLeft-1050<=70 && 
+        e.pageY-this.offsetTop-550>=0 && e.pageY-this.offsetTop-600<=50 ){
         loadNewImg(index+2);
          
     }
@@ -46,7 +47,12 @@ function fadeText(){
 
 function loadNewImg(i){
     console.log(i);
-    if(i==17){
+    if(i==17 || i>=20){
+        if(i==20){
+            setTimeout(() => { $("#imgSite").fadeOut(1000); }, 0);
+            setTimeout(() => { $("#imgText").fadeOut(1000); }, 0);
+            setTimeout(() => { $("#3").fadeIn(2000); }, 1000);
+        }
     }else{
 
         
@@ -54,6 +60,7 @@ function loadNewImg(i){
         index=i;
         imgSrc = "img/phase_"+i+".png";
         imgSrcText = "img/text_"+i+".png";
+        
         document.getElementById('imgSite').src = imgSrc+"?random=" + new Date().getTime();
         document.getElementById('imgText').src = imgSrcText+"?random=" + new Date().getTime();
         var sOundPath = "son/sound_"+i+".mp3";

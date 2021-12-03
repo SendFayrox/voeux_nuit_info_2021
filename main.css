@@ -22,9 +22,15 @@ img{
 #imgText{
     position :  absolute ;
     top :  20% ;
-    left :  30% ;
+    left :  10% ;
 }
 
 #div_img_site{
     position :  relative ;
+}
+
+h2{
+    color: white;
+    font-size: 4em;
+    margin-top: 5%;
 }
